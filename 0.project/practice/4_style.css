@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+input[ type="radio"] {
+    display: none;
+}
+
+.top-logo{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.top-logo img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu a {
+    margin: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.section {
+    display: none;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 300px;
+}
+
+#home:checked ~ .content #homeSection
+#painting:checked ~ .content #paintingSection
+#sculpture:checked ~ .content #sculptureSection
+#college:checked ~ .content #collegeSection {
+    display: block;
+}

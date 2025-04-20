@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>ArtHARBOR(아트하버)</title>
+        <style>
+            body {
+              font-family: sans-serif;
+              margin: 0;
+            }
+        
+            input[type="radio"] {
+              display: none;
+            }
+        
+            .top-logo {
+              text-align: center;
+              padding-top: 20px;
+            }
+        
+            .top-logo img {
+              width: 120px;
+              cursor: pointer;
+            }
+        
+            .menu {
+              text-align: center;
+              margin: 20px 0;
+            }
+        
+            .menu label {
+              margin: 0 15px;
+              font-weight: bold;
+              font-size: 16px;
+              cursor: pointer;
+              color: #aaa;
+              border-bottom: 2px solid transparent;
+              padding-bottom: 5px;
+              transition: all 0.3s ease;
+            }
+
+            #painting:checked ~ .menu label[for="painting"],
+            #sculpture:checked ~ .menu label[for="sculpture"],
+            #mediaart:checked ~ .menu label[for="mediaart"],
+            #college:checked ~ .menu label[for="college"]  {
+              color: #000;
+              border-bottom: 2px solid #000;
+            }
+
+            .section {
+              display: none;
+              padding: 10px;
+              text-align: center;
+              min-height: 300px;
+            }
+        
+            #home:checked ~ .content #homeSection,
+            #painting:checked ~ .content #paintingSection,
+            #sculpture:checked ~ .content #sculptureSection,
+            #mediaart:checked ~ .content #mediaartSection,
+            #college:checked ~ .content #collegeSection {
+              display: block;
+            }
+
+            .fixed-img {
+              text-align: center;
+              width: 1500px;
+              height: 700px;
+              object-fit: cover;
+            }
+
+          </style>
+    </head>
+<body>
+<input type="radio" name="section" id="home" checked>
+<input type="radio" name="section" id="painting">
+<input type="radio" name="section" id="sculpture">
+<input type="radio" name="section" id="mediaart">
+<input type="radio" name="section" id="college">
+
+    <div class="top-logo">
+        <a href="4.html">
+            <img src="artharborlogo1.png" alt="홈으로가기">
+        </a>
+    </div>
+
+    <div class="menu">
+        <label for="painting">Painting</label>
+        <label for="sculpture">Sculpture</label>
+        <label for="mediaart">Media Art</label>
+        <label for="college">College</label>
+      </div>
+
+      <div class="content">
+        <div id="homeSection" class="section">
+          <h2> 홈</h2>
+          <img src="star_painting1.jpg" class="fixed-img">
+        </div>
+    
+        <div id="paintingSection" class="section">
+          <h2>Painting</h2>
+          <p>회화</p>
+        </div>
+    
+        <div id="sculptureSection" class="section">
+          <h2>Sculpture</h2>
+          <p>조각</p>
+        </div>
+    
+        <div id="mediaartSection" class="section">
+          <h2>Media Art</h2>
+          <p>미디어 아트</p>
+        </div>
+    
+        <div id="collegeSection" class="section">
+          <h2>College</h2>
+          <p>졸업전시</p>
+        </div>
+      </div>
+</body>
+</html>
